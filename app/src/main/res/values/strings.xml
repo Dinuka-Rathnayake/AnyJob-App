@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">AnyJob</string>
+    <string name="txt_title1_k">Give Your Feedback Here</string>
+    <string name="txt_name1_k">Name</string>
+    <string name="txt_feedback_k">Feddback</string>
+    <string name="btn_save_k">SAVE</string>
+    <string name="btn_cansel_k">Cansel</string>
+
+
 </resources>
