@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.DetailsActivity"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details_d"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etJobTitle_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title_d"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/etJobDescription_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/describe_d"
+        android:textSize="20dp"
+        android:minHeight="48dp"
+        />
+
+    <EditText
+        android:id="@+id/etJobBudget_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/your_d"
+        android:minHeight="48dp"
+        android:textSize="20dp"/>
+
+
+    <RadioGroup
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_one_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shedule_d"
+            android:textSize="20dp"/>
+        <RadioButton
+        android:id="@+id/radio_two_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ergent_d"
+            android:textSize="20dp" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Date_d"
+        android:textSize="20dp">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Image_d"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/imageView_d"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        app:srcCompat="@drawable/image" />
+
+    <Button
+        android:id="@+id/btnNextDetails_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="nextToContactDetails"
+        android:text="@string/next_d" />
+
+</LinearLayout>

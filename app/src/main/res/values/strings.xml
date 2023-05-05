@@ -1,3 +1,60 @@
 <resources>
     <string name="app_name">AnyJob</string>
+
+    <string name="location_d">Location</string>
+    <string name="location_descript_d">Please choose the location you need job to be done at</string>
+    <string name="next_d">Next</string>
+
+    <!-- service activity-->
+    <string name="service_d">Service</string>
+    <string name="technitian_d">Technitian</string>
+    <string name="Vehicle_d">Vehicles</string>
+    <string name="IT_d">IT</string>
+    <string name="profession_d">Professional</string>
+    <string name="personalized_d">Personalized Services</string>
+    <string name="printing_d">Printing</string>
+    <string name="house_d">House</string>
+    <string name="beauty_d">Beauty and Event</string>
+    <string name="other_d">Other</string>
+    <string name="btnBack_d">Back</string>
+
+    <!-- details activity-->
+    <string name="details_d">Details</string>
+    <string name="title_d">Title</string>
+    <string name="describe_d">Describe your Problem</string>
+    <string name="your_d">Your Budget</string>
+    <string name="shedule_d">Sheduled Job</string>
+    <string name="ergent_d">Ergent Job</string>
+    <string name="Date_d">Due Date</string>
+    <string name="Image_d">Images</string>
+
+    <!--contact details page-->
+    <string name="contact_detail_d">Contact Details</string>
+    <string name="phone_No_d">Phone No</string>
+    <string name="ckbox_description_d">Do not show my phone number</string>
+    <string name="add_new_d">Add new phone number</string>
+
+    <!--add new phone No-->
+    <string name="enter_new_description_d">Enter your new number</string>
+    <string name="hint_new_number_d">Your new number</string>
+    <string name="btn_number_d">Add phone number</string>
+
+
+    <!-- job preview-->
+    <string name="preview_d">Preview</string>
+    <string name="jobName_d">Rapair electric board</string>
+    <string name="jobCategory_d">plumbing</string>
+    <string name="dateHint_d">Before Monday, april, 2023 </string>
+    <string name="areaHint_d">Galle</string>
+    <string name="feeHint_d">15</string>
+    <string name="jobhintdetails_d">Details</string>
+    <string name="previejobHintDiscription_d">sdfaf</string>
+    <string name="postBtn_d">Post</string>
+
+    <!--all job-->
+    <string name="myjob_appName_d">My Jobs</string>
+    <string name="motorBikeRepair_d">Motor bike repair</string>
+    <string name="urgent_d">Urgent</string>
+    <string name="category_d">vehicle</string>
+    <string name="jobLocation_d">Navinna</string>
 </resources>
