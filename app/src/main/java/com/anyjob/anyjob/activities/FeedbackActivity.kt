@@ -1,5 +1,6 @@
 package com.anyjob.anyjob.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -36,6 +37,9 @@ class FeedbackActivity : AppCompatActivity() {
         //set button
         btnSaveData.setOnClickListener {
             saveFeedbackData()
+
+            val intent = Intent(this, MyFeedbacksActivity::class.java)
+            startActivity(intent)
         }
 
 
@@ -54,7 +58,7 @@ class FeedbackActivity : AppCompatActivity() {
         }
         if(cusFeedback.isEmpty()){
             etCusFeedback.error ="Please Give Your Feedback"
-    }
+        }
 
         //send data to db
         val jobId = dbRef.push().key!!
@@ -72,8 +76,11 @@ class FeedbackActivity : AppCompatActivity() {
 
 
 
+
+
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
+
     }
 }
