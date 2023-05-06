@@ -25,6 +25,12 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity
+            android:name=".activities.Register"
+            android:exported="true"/>
+        <activity
+            android:name=".activities.ServiceDetailsActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

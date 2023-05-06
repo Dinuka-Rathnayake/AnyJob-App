@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">AnyJob</string>
+
+    <string name="app_name_s">Profile</string>
+    <string name="toolbar_name_s">Profile</string>
+    <!-- User Profile -->
+    <string name="profile_toolbar_name_s">My Profile</string>
+    <string name="UserName_s">Guest-User</string>
+    <string name="UserPhone_s">+94 776 1234</string>
+    <string name="text_add_cat_s">Providing Services</string>
+    <string name="btn_add_cat_s">Register for new service categroy</string>
+
+
+    <!-- New Registration -->
+    <string name="register_new_cat_toolbar_name_s">Add Registration</string>
+    <string name="register_new_cat_text_1_s">Industry</string>
+    <string name="register_new_cat_text_2_s">Service</string>
+    <string name="register_new_cat_btn_next_s">Next</string>
+
+
+
+    <!-- New Registration_02 -->
+    <string name="register_new_cat_txtArea_s">Description</string>
+    <string name="register_new_cat_text3_s">Pictures</string>
+    <string name="register_new_cat_btn_register_s">REGISTER</string>
 </resources>

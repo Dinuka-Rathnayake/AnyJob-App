@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="red_anyJob">#fe646a</color>
+    <color name="grey_anyJob">#818588</color>
+    <color name="black_anyJob">#484848</color>
+    <color name="divider_grey">#f0f0f0f0</color>
 </resources>
