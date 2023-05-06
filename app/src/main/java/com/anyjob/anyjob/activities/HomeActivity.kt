@@ -10,6 +10,9 @@ class HomeActivity : AppCompatActivity() {
 
     //declare eliments
     private lateinit var btnNewJob: Button
+    private lateinit var btnMyJob: Button
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,12 +20,18 @@ class HomeActivity : AppCompatActivity() {
 
         //initialize button
         btnNewJob = findViewById(R.id.btnNewJob)
+        btnMyJob = findViewById(R.id.btnMyJobs)
 
         //set click
         btnNewJob.setOnClickListener{
-            val intent = Intent(this, DetailsActivity::class.java)
+            val intent = Intent(this, JobInsertActivity::class.java)
             startActivity(intent)
         }
+        btnMyJob.setOnClickListener{
+            val intent = Intent(this, MyJobsActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 

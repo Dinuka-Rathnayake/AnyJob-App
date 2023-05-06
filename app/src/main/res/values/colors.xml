@@ -11,4 +11,5 @@
     <color name="red_anyjob">#fe646a</color>
     <color name="black_anyjob">#484848</color>
     <color name="grey_anyjob">#818588</color>
+    <color name="divider_grey">#d3d3d3</color>
 </resources>

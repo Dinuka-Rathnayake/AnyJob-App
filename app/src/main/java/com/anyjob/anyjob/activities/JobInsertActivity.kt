@@ -6,10 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import com.anyjob.anyjob.R
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 
-class DetailsActivity : AppCompatActivity() {
+class JobInsertActivity : AppCompatActivity() {
     //declare
     private lateinit var etJobTitle: EditText
     private lateinit var etJobDescription: EditText
@@ -20,7 +18,7 @@ class DetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_details)
+        setContentView(R.layout.activity_job_insert)
 
         //initialize variables
         etJobTitle = findViewById(R.id.etJobTitle_d)

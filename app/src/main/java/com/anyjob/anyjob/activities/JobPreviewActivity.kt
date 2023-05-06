@@ -70,7 +70,7 @@ class JobPreviewActivity : AppCompatActivity() {
         val jobId = dbRef.push().key!!
 
         //create object from model
-        val job = JobModel(jobId, jobTitle, jobBudget)
+        val job = JobModel(jobId, jobTitle, jobBudget, jobDescription)
 
         //send data to db
         dbRef.child(jobId).setValue(job)
