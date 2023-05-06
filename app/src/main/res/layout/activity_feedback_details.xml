@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Job id"
+                    android:text="Feedback Id"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -73,7 +73,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvJobId"
+                    android:id="@+id/tvFeedbackId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -110,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Job Title"
+                    android:text="Employee Name"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -122,7 +122,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvJobTitle"
+                    android:id="@+id/tvFeedbakEmpName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -161,7 +161,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Job Description"
+                    android:text="Feedback"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -176,7 +176,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvJobDescription"
+                    android:id="@+id/tvFeedback"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -200,50 +200,11 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
-            android:weightSum="2"
-
-            >
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.6"
-                android:background="@color/divider_grey">
-
-                <TextView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:gravity="center"
-                    android:text="Job Fee"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
+            android:weightSum="2">
 
 
-                    />
 
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.4">
-
-                <TextView
-                    android:id="@+id/tvJobFee"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text=""
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-
-                    />
-
-            </LinearLayout>
 
 
         </LinearLayout>

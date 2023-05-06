@@ -13,14 +13,14 @@
         android:theme="@style/Theme.AnyJob"
         tools:targetApi="31">
         <activity
-            android:name=".FeedbackDetailsActivity"
+            android:name=".activities.FeedbackDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".JobDetailsActivity"
+            android:name=".activities.JobDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

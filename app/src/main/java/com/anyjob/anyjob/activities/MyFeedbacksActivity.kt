@@ -1,5 +1,6 @@
 package com.anyjob.anyjob.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -49,6 +50,23 @@ class MyFeedbacksActivity : AppCompatActivity() {
                     }
                     val mAdapter = FeedbackAdapter(feedbackList)
                     feedbackRecyclerView.adapter = mAdapter
+
+                    //onclick
+                    mAdapter.setOnItemClickListener(object:FeedbackAdapter.onItemClickListener{
+                        override fun onItemClick(position: Int) {
+                            val intent = Intent(this@MyFeedbacksActivity, FeedbackDetailsActivity::class.java)
+
+                            //put extra
+                            intent.putExtra("feedbackId", feedbackList[position].feedbackId)
+                            intent.putExtra("feedbackEmployeeName", feedbackList[position].feedbackEmployeeName)
+                            intent.putExtra("cusFeedback", feedbackList[position].cusFeedback)
+
+                            startActivity(intent)
+
+                        }
+
+                    })
+
 
                     feedbackRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE

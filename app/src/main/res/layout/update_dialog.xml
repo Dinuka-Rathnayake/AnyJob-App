@@ -6,32 +6,23 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/etJobTitleUpdate"
+        android:id="@+id/etFeedbackEmpNameUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Job Title"
+        android:hint="Employee name"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etJobDescriptionUpdate"
+        android:id="@+id/etFeedbackUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Job Description" />
-
-    <EditText
-        android:id="@+id/etJobFeeUpdate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Job Fee"
-        android:inputType="textPersonName" />
+        android:hint="Feedback" />
 
     <Button
-        android:id="@+id/btnJobUpdateData"
+        android:id="@+id/btnFeedbackUpdateData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
