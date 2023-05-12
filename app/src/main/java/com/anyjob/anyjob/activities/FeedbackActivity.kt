@@ -38,8 +38,7 @@ class FeedbackActivity : AppCompatActivity() {
         btnSaveData.setOnClickListener {
             saveFeedbackData()
 
-            val intent = Intent(this, MyFeedbacksActivity::class.java)
-            startActivity(intent)
+
         }
 
 
@@ -59,28 +58,30 @@ class FeedbackActivity : AppCompatActivity() {
         if(cusFeedback.isEmpty()){
             etCusFeedback.error ="Please Give Your Feedback"
         }
+        else {
 
-        //send data to db
-        val jobId = dbRef.push().key!!
+            //send data to db
+            val jobId = dbRef.push().key!!
 
-        //create object from model
-        val feedback = FeedbackModel(jobId, empName,cusFeedback )
+            //create object from model
+            val feedback = FeedbackModel(jobId, empName, cusFeedback)
 
-        //send data to db
-        dbRef.child(jobId).setValue(feedback)
-            .addOnCompleteListener {
-                Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
+            //send data to db
+            dbRef.child(jobId).setValue(feedback)
+                .addOnCompleteListener {
+                    Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
 
-                etEmpName.text.clear()
-                etCusFeedback.text.clear()
+                    etEmpName.text.clear()
+                    etCusFeedback.text.clear()
+
+                    val intent = Intent(this, MyFeedbacksActivity::class.java)
+                    startActivity(intent)
 
 
-
-
-
-            }.addOnFailureListener { err ->
-                Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
-            }
+                }.addOnFailureListener { err ->
+                    Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
+                }
+        }
 
     }
 }
