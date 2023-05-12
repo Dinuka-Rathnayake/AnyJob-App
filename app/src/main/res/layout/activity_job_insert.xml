@@ -86,9 +86,10 @@
 
     <Button
         android:id="@+id/btnNextDetails_d"
-        android:layout_width="match_parent"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:onClick="nextToContactDetails"
-        android:text="@string/next_d" />
+        android:text="@string/next_d"
+        app:cornerRadius="20dp" />
 
 </LinearLayout>

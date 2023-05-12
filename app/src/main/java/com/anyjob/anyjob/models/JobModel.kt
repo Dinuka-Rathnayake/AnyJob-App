@@ -4,5 +4,6 @@ data class JobModel(
     var JobId: String? = null,
     var JobTitle:String? = null,
     var JobBudget:String? = null,
-    var JobDescription:String? = null
+    var JobDescription:String? = null,
+    var JobLocation:String? = null
 )

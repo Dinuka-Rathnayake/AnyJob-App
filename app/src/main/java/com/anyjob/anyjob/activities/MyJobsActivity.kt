@@ -52,8 +52,6 @@ class MyJobsActivity : AppCompatActivity() {
                         val empData = empSnap.getValue(JobModel::class.java)
                         jobList.add(empData!!)
                     }
-
-
                     val mAdapter = JobAdapter(jobList)
                     myJobRecyclerView.adapter = mAdapter
                         //onclick
@@ -67,11 +65,8 @@ class MyJobsActivity : AppCompatActivity() {
                             intent.putExtra("jobDescription", jobList[position].JobDescription)
                             intent.putExtra("jobBudget", jobList[position].JobBudget)
                             startActivity(intent)
-
                         }
-
                     })
-
 
                     //change visibility
                     myJobRecyclerView.visibility = View.VISIBLE

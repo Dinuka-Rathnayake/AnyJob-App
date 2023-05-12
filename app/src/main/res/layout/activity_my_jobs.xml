@@ -69,24 +69,23 @@
 
 
             <ImageView
-                android:id="@+id/imgHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:srcCompat="@drawable/selected_home"
-                tools:ignore="ImageContrastCheck" />
+                android:id="@+id/img_home"
+                android:layout_width="8dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/job_home" />
 
             <Space
-                android:layout_width="0dp"
+                android:layout_width="74dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
             <ImageView
-                android:id="@+id/imgUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:srcCompat="@drawable/unselected_user" />
+                android:id="@+id/imageView2"
+                android:layout_width="5dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/profile2" />
 
         </LinearLayout>
 
@@ -98,7 +97,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
+        android:backgroundTint="@color/red_anyjob"
         android:text="New Job"
+        app:cornerRadius="16dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.893"

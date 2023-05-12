@@ -16,6 +16,7 @@ class JobPreviewActivity : AppCompatActivity() {
     private lateinit var tvJobTitle: TextView
     private lateinit var tvJobDescription : TextView
     private lateinit var tvJobBudget : TextView
+    private lateinit var tvLocation : TextView
     private lateinit var btnJobpost : Button
 
 
@@ -29,6 +30,7 @@ class JobPreviewActivity : AppCompatActivity() {
         tvJobTitle = findViewById(R.id.tvTitle)
         tvJobDescription = findViewById(R.id.tvDescription)
         tvJobBudget = findViewById(R.id.tvBudget)
+        tvLocation = findViewById(R.id.tvLocation)
         btnJobpost = findViewById(R.id.btnJobPost)
 
         setValuesToViews()
@@ -47,6 +49,8 @@ class JobPreviewActivity : AppCompatActivity() {
         tvJobDescription.text = intent.getStringExtra("description")
         tvJobBudget.text = intent.getStringExtra("budget")
 
+        tvLocation.text = intent.getStringExtra("location")
+
 
     }
 
@@ -55,6 +59,7 @@ class JobPreviewActivity : AppCompatActivity() {
         val jobTitle = tvJobTitle.text.toString()
         val jobDescription = tvJobDescription.text.toString()
         val jobBudget = tvJobBudget.text.toString()
+        val jobLocation = tvLocation.text.toString()
 
         if(jobTitle.isEmpty()){
             tvJobTitle.error = "please enter title"
@@ -65,21 +70,24 @@ class JobPreviewActivity : AppCompatActivity() {
         if(jobBudget.isEmpty()){
             tvJobBudget.error = "please enter a fee for job"
         }
+        if(jobLocation.isEmpty()) {
+            tvLocation.error = "please enter a llocation for job"
+        }
+        else {
+            //generate job ID
+            val jobId = dbRef.push().key!!
 
-        //send data to db
-        val jobId = dbRef.push().key!!
+            //create object from model
+            val job = JobModel(jobId, jobTitle, jobBudget, jobDescription, jobLocation)
 
-        //create object from model
-        val job = JobModel(jobId, jobTitle, jobBudget, jobDescription)
+            //send data to db
+            dbRef.child(jobId).setValue(job)
+                .addOnCompleteListener {
+                    Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
 
-        //send data to db
-        dbRef.child(jobId).setValue(job)
-            .addOnCompleteListener {
-                Toast.makeText(this, "Data inserted successfully", Toast.LENGTH_LONG).show()
-
-            }.addOnFailureListener { err ->
-                Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
-            }
-
+                }.addOnFailureListener { err ->
+                    Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
+                }
+        }
     }
 }

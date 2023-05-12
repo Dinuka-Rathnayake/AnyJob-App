@@ -8,8 +8,10 @@
     tools:context=".activities.HomeActivity">
 
 
+
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerViewHome"
         android:layout_width="412dp"
         android:layout_height="408dp"
         android:layout_marginBottom="128dp"
@@ -18,7 +20,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/job_list_item">
 
     </androidx.recyclerview.widget.RecyclerView>
 
@@ -41,24 +44,23 @@
 
 
             <ImageView
-                android:id="@+id/imgHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:srcCompat="@drawable/selected_home"
-                tools:ignore="ImageContrastCheck" />
+                android:id="@+id/imagejob"
+                android:layout_width="110dp"
+                android:layout_height="61dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/job_home" />
 
             <Space
-                android:layout_width="0dp"
+                android:layout_width="91dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1" />
 
             <ImageView
-                android:id="@+id/imgUser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                app:srcCompat="@drawable/unselected_user" />
+                android:id="@+id/imageView4"
+                android:layout_width="95dp"
+                android:layout_height="51dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/profile2" />
 
         </LinearLayout>
 
@@ -69,10 +71,12 @@
         android:id="@+id/btnNewJob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/red_anyjob"
         android:text="New Job"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView"
         app:layout_constraintVertical_bias="0.55" />
@@ -81,13 +85,30 @@
         android:id="@+id/btnMyJobs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="@color/red_anyjob"
         android:text="My Jobs"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toStartOf="@+id/btnNewJob"
-        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView"
         app:layout_constraintVertical_bias="0.562" />
+
+    <TextView
+        android:id="@+id/tvLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginEnd="226dp"
+        android:text="Loading"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.158" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LocationActivity"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/location_d"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imageView2_d"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/locations" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/location_descript_d"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="25dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/etJobLocation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/location_hint" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLocationNext1_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="nextToService"
+        android:text="@string/next_d" />
+
+
+</LinearLayout>

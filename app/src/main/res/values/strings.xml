@@ -2,6 +2,7 @@
     <string name="app_name">AnyJob</string>
 
     <string name="location_d">Location</string>
+    <string name="location_hint">Enter job location</string>
     <string name="location_descript_d">Please choose the location you need job to be done at</string>
     <string name="next_d">Next</string>
 
