@@ -16,6 +16,13 @@
         android:theme="@style/Theme.AnyJob"
         tools:targetApi="31">
         <activity
+            android:name=".activities.AllJobDetailsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.LocationActivity"
             android:exported="false">
             <meta-data
@@ -23,7 +30,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.JobDetailsActivity"
+            android:name=".activities.MyJobDetailsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

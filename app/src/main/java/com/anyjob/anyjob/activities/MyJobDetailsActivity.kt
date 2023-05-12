@@ -12,18 +12,20 @@ import com.anyjob.anyjob.R
 import com.anyjob.anyjob.models.JobModel
 import com.google.firebase.database.FirebaseDatabase
 
-class JobDetailsActivity : AppCompatActivity() {
+class MyJobDetailsActivity : AppCompatActivity() {
 
     private lateinit var tvJobId: TextView
     private lateinit var tvJobTitle: TextView
     private lateinit var tvJobDescription: TextView
     private lateinit var tvJobFee: TextView
+    private lateinit var tvJobLocation: TextView
+
     private lateinit var btnUpdate: Button
     private lateinit var btnDelete: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_job_details)
+        setContentView(R.layout.activity_my_job_details)
 
         //recycleview onclick
         initView()
@@ -52,6 +54,7 @@ class JobDetailsActivity : AppCompatActivity() {
         tvJobTitle = findViewById(R.id.tvJobTitle)
         tvJobDescription = findViewById(R.id.tvJobDescription)
         tvJobFee = findViewById(R.id.tvJobFee)
+        tvJobLocation = findViewById(R.id.tvLocation)
 
         btnUpdate = findViewById(R.id.btnUpdate)
         btnDelete = findViewById(R.id.btnDelete)
@@ -62,6 +65,7 @@ class JobDetailsActivity : AppCompatActivity() {
         tvJobTitle.text = intent.getStringExtra("jobTitle")
         tvJobDescription.text = intent.getStringExtra("jobDescription")
         tvJobFee.text = intent.getStringExtra("jobBudget")
+        tvJobLocation.text = intent.getStringExtra("jobLocation")
     }
 
     //delete function
@@ -97,11 +101,15 @@ class JobDetailsActivity : AppCompatActivity() {
         val etJobTitle = mDialogView.findViewById<EditText>(R.id.etJobTitleUpdate)
         val etJobDescription = mDialogView.findViewById<EditText>(R.id.etJobDescriptionUpdate)
         val etJobFee = mDialogView.findViewById<EditText>(R.id.etJobFeeUpdate)
+        val etJobLoacation = mDialogView.findViewById<EditText>(R.id.etJobLocationUpdate)
+
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnJobUpdateData)
 
+
         etJobTitle.setText(intent.getStringExtra("jobTitle").toString())
-        etJobDescription.setText(intent.getStringExtra("JobDescription").toString())
+        etJobDescription.setText(intent.getStringExtra("jobDescription").toString())
         etJobFee.setText(intent.getStringExtra("jobBudget").toString())
+        etJobLoacation.setText(intent.getStringExtra("jobLocation").toString())
 
         mDialog.setTitle("Updating $jobTitle Record")
 
@@ -113,7 +121,8 @@ class JobDetailsActivity : AppCompatActivity() {
                 jobId,
                 etJobTitle.text.toString(),
                 etJobDescription.text.toString(),
-                etJobFee.text.toString()
+                etJobFee.text.toString(),
+                etJobLoacation.text.toString()
             )
 
             Toast.makeText(applicationContext, "Employee Data Updated", Toast.LENGTH_LONG).show()
@@ -131,10 +140,11 @@ class JobDetailsActivity : AppCompatActivity() {
         id: String,
         title: String,
         description: String,
-        fee: String
+        fee: String,
+        location: String
     ){
         val dbRef = FirebaseDatabase.getInstance().getReference("Jobs").child(id)
-        val empInfo = JobModel(id, title, description, fee)
+        val empInfo = JobModel(id, title, description, fee, location)
         dbRef.setValue(empInfo)
     }
 

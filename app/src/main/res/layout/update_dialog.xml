@@ -12,6 +12,13 @@
         android:layout_marginTop="20dp"
         android:hint="Job Title"
         android:inputType="textPersonName" />
+    <EditText
+        android:id="@+id/etJobLocationUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Job Location"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/etJobDescriptionUpdate"

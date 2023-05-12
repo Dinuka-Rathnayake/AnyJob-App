@@ -79,13 +79,14 @@ class HomeActivity : AppCompatActivity() {
                     //onclick
                     mAdapter.setOnItemClickListener(object: JobAdapter.onItemClickListener{
                         override fun onItemClick(position: Int) {
-                            val intent = Intent(this@HomeActivity, JobDetailsActivity::class.java)
+                            val intent = Intent(this@HomeActivity, AllJobDetailsActivity::class.java)
 
                             //put extra
                             intent.putExtra("jobId", jobList[position].JobId)
                             intent.putExtra("jobTitle", jobList[position].JobTitle)
                             intent.putExtra("jobDescription", jobList[position].JobDescription)
                             intent.putExtra("jobBudget", jobList[position].JobBudget)
+                            intent.putExtra("jobLocation", jobList[position].JobLocation)
                             startActivity(intent)
                         }
                     })
