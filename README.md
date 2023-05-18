@@ -1,4 +1,4 @@
-# Project Name - Mobile-Store-Management-System
+# Project Name - Job Bridging Mobile App
 
 ### Group Leader - Rathnayake M.D.M
 ### Member 2 - Wishvajith.S.A.S 
